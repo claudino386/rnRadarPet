@@ -60,10 +60,19 @@ Participe da Aula ao Vivo no Canal Dev Samurai: https://www.youtube.com/c/Devsam
 
 4. Adicionar os Pets
     
-    * Criar uma classe de serviço chamada `pet.js`.
+    * Criar uma classe de serviço chamada `FetchPet.js`.
     * Retornar estaticamente os resultados de todos os pets perdidos.
 
-5. Criar a página `missed-details`
+5. Criar o componente `PetScreen`
   
   * API: https://facebook.github.io/react-native/docs/navigation
   * Documentação sobre o React Navigation: https://reactnavigation.org/docs/en/getting-started.html
+  * Instalar o componente:
+  ```
+  $ npm install --save react-navigation
+  $ npm install --save react-native-gesture-handler
+  $ react-native link
+  ```
+
+  * Ajustar os componentes e a classe `App` para suportar o `AppNavigator`.
+  * Ajustar o layout da página `PetScreen`
