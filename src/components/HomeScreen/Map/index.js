@@ -3,8 +3,9 @@ import { View } from 'react-native'
 import MapView, { Marker } from 'react-native-maps';
 
 import { getMissedPets } from '../../../services/FetchPet';
-import { POINTICON } from '../../../assets/images/markers';
 import styles from './styles';
+
+import { POINTICON } from '../../../assets/images/markers';
 
 export default class Map extends Component {
   state = {
@@ -30,14 +31,14 @@ export default class Map extends Component {
             },
             image: POINTICON
           },
-          pets: getMissedPets()
+          pets: await getMissedPets()
         });
       }
     );
   }
 
-  showPetInfo(pet) {
-    this.props.navigation.push('Pet', { petId: pet.id });
+  async showPetInfo(pet) {
+    this.props.navigation.push('Pet', { petId: pet._id });
   }
 
   render() {
@@ -58,12 +59,13 @@ export default class Map extends Component {
           {pets &&
             pets.map(pet => (
               <Marker
-                key={pet.id}
+                key={pet._id}
                 coordinate={pet.coordinate}
-                image={pet.icon}
+                image={{uri: pet.icon}}
                 onPress={e => { this.showPetInfo(pet) }}/>
             ))
           }
+
         </MapView>
       </View>
     );
