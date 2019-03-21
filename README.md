@@ -4,6 +4,10 @@ Aplicativo Ionic criado na aula ao vivo do Prof. Felipe Fontoura no dia 14-Mar-2
 
 Participe da Aula ao Vivo no Canal Dev Samurai: https://www.youtube.com/c/DevsamuraiBr/live
 
+**UPDATE**
+
+Um novo branch foi adicionado em função da aula do dia 21/03/2019: https://gitlab.com/devsamurai/rnRadarPet/tree/server
+
 ## Roteiro da aula ao vivo
 
 1. Criar o projeto React Native
